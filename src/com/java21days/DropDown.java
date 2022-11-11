@@ -11,12 +11,14 @@ public class DropDown extends JFrame {
         setSize(dim);
         JPanel panel = new JPanel();
         JLabel messageLabel = new JLabel(message);
-
+        JComboBox<String> optionsDropDown= new JComboBox<>(options);
 
         panel.add(messageLabel);
+        panel.add(optionsDropDown);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         add(panel);
         setVisible(true);
+        pack();
     }
 }
